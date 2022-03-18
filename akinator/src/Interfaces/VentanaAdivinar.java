@@ -31,19 +31,15 @@ public class VentanaAdivinar extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         Regresar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(88, 204, 243));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Raydo\\Documents\\akinator\\akinator1.png")); // NOI18N
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, 270, 450));
 
         jLabel3.setFont(new java.awt.Font("Niagara Engraved", 0, 90)); // NOI18N
         jLabel3.setText("AKINATOR");
@@ -58,6 +54,10 @@ public class VentanaAdivinar extends javax.swing.JFrame {
         });
         jPanel1.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 140, -1));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Raydo\\Documents\\akinator\\akinator\\imagenes\\akinator1.png")); // NOI18N
+        jLabel2.setText("jLabel1");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, 270, 450));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 460));
 
         pack();
@@ -71,7 +71,7 @@ public class VentanaAdivinar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Regresar;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

@@ -41,7 +41,7 @@ public class VentanaInicio extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(88, 204, 243));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Raydo\\Documents\\akinator\\akinator1.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Raydo\\Documents\\akinator\\akinator\\imagenes\\akinator1.png")); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, 270, 450));
 
