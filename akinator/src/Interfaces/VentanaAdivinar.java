@@ -7,7 +7,7 @@ package Interfaces;
 
 /**
  *
- * @author Raydo
+ * @author Jennifer Pérez
  */
 public class VentanaAdivinar extends javax.swing.JFrame {
 
