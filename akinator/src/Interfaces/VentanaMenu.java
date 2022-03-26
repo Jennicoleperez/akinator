@@ -99,7 +99,7 @@ public class VentanaMenu extends javax.swing.JFrame {
         });
         jPanel1.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, 250, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Raydo\\Documents\\akinator\\akinator\\imagenes\\akinator1.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/akinator1.png"))); // NOI18N
         jLabel2.setText("jLabel1");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, 270, 450));
 

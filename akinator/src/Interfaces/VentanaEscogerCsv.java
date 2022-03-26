@@ -84,7 +84,7 @@ public class VentanaEscogerCsv extends javax.swing.JFrame {
         jLabel2.setText("Seleccione el archivo con el que desee continuar el juego:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Raydo\\Documents\\akinator\\akinator\\imagenes\\akinator1.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/akinator1.png"))); // NOI18N
         jLabel4.setText("jLabel1");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, 270, 450));
 
