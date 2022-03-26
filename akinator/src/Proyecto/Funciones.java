@@ -80,7 +80,7 @@ public class Funciones {
     }
     
     /**
-     * Función que te devuelve un arreglo con todas las palabras del texto, sin caracteres especiales.
+     * Función que devuelve un arreglo con todas las palabras del texto, sin caracteres especiales.
      * 
      * @param texto texto proveniente de leer el csv
      * @return arreglo con las palabras

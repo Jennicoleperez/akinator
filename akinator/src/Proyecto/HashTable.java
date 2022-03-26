@@ -53,4 +53,40 @@ public class HashTable {
         }
         return (valor % tamano);
     }
+    
+    /**
+     *
+     * Funcion que devuelve un nodo correspondiente a la palabra que se pasa por
+     * parámetro, sacando el valor Hash se encuentra el nodo que se requiere y
+     * en caso de haber colisiones se recorre esa lista
+     *
+     * @param palabra palabra a buscar
+     * @return NodoHash correspondiente a la palabra ingresada
+     */
+    public NodoHashTable buscar(String palabra) {
+        int posicion = hashing(palabra);
+        NodoHashTable temp = this.tabla[posicion];
+        boolean existe = false;
+
+        if (temp != null) {
+            if (temp.getSiguiente() == null) {
+                if (temp.getPalabra().equals(palabra)) {
+                    existe = true;
+                }
+            } else {
+                while (temp != null && !existe) {
+                    if (temp.getPalabra().equals(palabra)) {
+                        existe = true;
+                    } else {
+                        temp = temp.getSiguiente();
+                    }
+                }
+            }
+        }
+        if (existe) {
+            return temp;
+        } else {
+            return null;
+        }
+    }
 }
