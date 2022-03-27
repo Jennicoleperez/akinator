@@ -9,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.PrintWriter;
+import java.util.Scanner;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -18,7 +19,7 @@ public class Funciones {
     /**
     * Método lee el archivo predeterminado
     */
-    
+        
     public String leer(){
         String linea;
         String datos_csv = "";
@@ -43,8 +44,8 @@ public class Funciones {
                     JOptionPane.showMessageDialog(null, "Error al leer los datos.");
         }
         return datos_csv ;  
-    }   
-   
+    }
+    
     /**
      * Método lee el archivo cargado de manera remota
      */

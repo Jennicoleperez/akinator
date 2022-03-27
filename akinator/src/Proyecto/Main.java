@@ -48,4 +48,5 @@ public class Main {
                 System.out.println("VOY A ADIVINAR TU ANIMAL!");
                 tree.recorrido(puntero);
     }
+    
 }
