@@ -15,13 +15,13 @@ public class NodoHashTable {
     //Campos de la clase
     private NodoHashTable siguiente; //apuntador a siguiente en la hash table, en caso de haber colisiones
     private NodoHashTable siguienteLista; //apuntador siguiente en la lista
-    private String palabra;
+    private String animal;
     private int count;
 
     //Constructor de la clase
-    public NodoHashTable(String palabra) {
+    public NodoHashTable(String animal) {
         this.siguiente = null;
-        this.palabra = palabra;
+        this.animal = animal;
         this.count = 1;
     }
     
@@ -33,12 +33,12 @@ public class NodoHashTable {
         this.siguiente = siguiente;
     }
 
-    public String getPalabra() {
-        return palabra;
+    public String getAnimal() {
+        return animal;
     }
 
-    public void setPalabra(String nombre) {
-        this.palabra = nombre;
+    public void setAnimal(String nombre) {
+        this.animal = nombre;
     }
 
     public int getCount() {

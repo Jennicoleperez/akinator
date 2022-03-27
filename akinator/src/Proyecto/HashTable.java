@@ -33,7 +33,7 @@ public class HashTable {
      *
      * Función hash
      *
-     * @param llave en este caso, será la palabra
+     * @param llave en este caso, será el animal
      * @return entero correspondiente al valor hash
      */
     public int hashing(String llave) {
@@ -54,6 +54,46 @@ public class HashTable {
         return (valor % tamano);
     }
     
+     /**
+     *
+     * procedimiento para insertar
+     *
+     * @param animal palabra a insertar
+     *
+     */
+    public void insertar(String animal) {
+        int posicion = hashing(animal);
+        boolean existe = false;
+
+        if (this.tabla[posicion] != null) {
+
+            NodoHashTable temp = this.tabla[posicion];
+            if (temp.getAnimal().equals(animal)) {
+                existe = true;
+                temp.addCount();
+            }
+            while (temp.getSiguiente() != null) {
+                temp = temp.getSiguiente();
+                if (temp.getAnimal().equals(animal)) {
+                    existe = true;
+                    temp.addCount();
+
+                }
+            }
+            if (!existe) {
+                NodoHashTable nuevo = new NodoHashTable(animal);
+                temp.setSiguiente(nuevo);
+//                lista.agregarFinal(nuevo);
+
+            }
+        } else {
+            NodoHashTable nuevo = new NodoHashTable(animal);
+            this.tabla[posicion] = nuevo;
+//            lista.agregarFinal(nuevo);
+
+        }
+    }
+    
     /**
      *
      * Funcion que devuelve un nodo correspondiente a la palabra que se pasa por
@@ -63,19 +103,19 @@ public class HashTable {
      * @param palabra palabra a buscar
      * @return NodoHash correspondiente a la palabra ingresada
      */
-    public NodoHashTable buscar(String palabra) {
-        int posicion = hashing(palabra);
+    public NodoHashTable buscar(String animal) {
+        int posicion = hashing(animal);
         NodoHashTable temp = this.tabla[posicion];
         boolean existe = false;
 
         if (temp != null) {
             if (temp.getSiguiente() == null) {
-                if (temp.getPalabra().equals(palabra)) {
+                if (temp.getAnimal().equals(animal)) {
                     existe = true;
                 }
             } else {
                 while (temp != null && !existe) {
-                    if (temp.getPalabra().equals(palabra)) {
+                    if (temp.getAnimal().equals(animal)) {
                         existe = true;
                     } else {
                         temp = temp.getSiguiente();
