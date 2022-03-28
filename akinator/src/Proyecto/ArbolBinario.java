@@ -22,9 +22,12 @@ public class ArbolBinario {
             return n==null;
         }
 	public void insertLeft(String parent, String leftvalue) {
-		Node n = find(root, parent);
-		Node leftchild = new Node(leftvalue);
-		n.Set_Left_child(leftchild);
+            
+            Node n = find(root, parent);
+//                System.out.println(n);
+//                System.out.println(this.getRoot().get_info());
+            Node leftchild = new Node(leftvalue);
+            n.Set_Left_child(leftchild);
 	}
 
 	public void insertRight(String parent, String rightvalue) {
@@ -53,6 +56,17 @@ public class ArbolBinario {
 			result = find(n.Right_child(), key);
 		return result;
 	}
+        
+//        public Node find(Node root, String key){
+//            Node aux = null;
+//            if ((root == null)||(root.get_info()).equals(key)){
+//                return root;
+//            }
+//            if (root.Left_child() != null){
+//                return find(root.Left_child(), key);             
+//            }
+//            return find(root.Right_child(), key);
+//        }
 
 	public int getheight(Node root) {
 		if (root == null)
