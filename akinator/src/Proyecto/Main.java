@@ -17,8 +17,8 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-                Funciones func = new Funciones();
-                VentanaInicio vi = new VentanaInicio();
+        Funciones func = new Funciones();
+        VentanaInicio vi = new VentanaInicio();
                 boolean respuesta;
 		ArbolBinario tree = new ArbolBinario();
 		
@@ -44,9 +44,17 @@ public class Main {
                 tree.insertLeft("Se sumerge?", "Es Rinoceronte");
                 tree.insertRight("Se sumerge?", "Es Hipopotamo");
                 Node puntero = tree.getRoot();
-                
+                tree.printTree(puntero);
                 System.out.println("VOY A ADIVINAR TU ANIMAL!");
                 tree.recorrido(puntero);
+
+////        String csvPred = func.leer();
+//        Lista csvCarg = func.leerCsvCargado();
+////        System.out.println(csvPred);
+//        ArbolBinario tree = func.ListToTree(csvCarg);
+//        Node puntero = tree.getRoot();
+//        tree.printTree(puntero);
+        
     }
     
 }

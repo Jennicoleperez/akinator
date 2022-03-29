@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
@@ -5,3 +6,19 @@
         <group/>
     </open-files>
 </project-private>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/akinator/akinator/src/Interfaces/VentanaEscogerCsv.java</file>
+            <file>file:/D:/akinator/akinator/src/Interfaces/VentanaGraficar.java</file>
+            <file>file:/D:/akinator/akinator/src/Interfaces/VentanaMenu.java</file>
+            <file>file:/D:/akinator/akinator/src/Interfaces/VentanaBuscarAnimal.java</file>
+            <file>file:/D:/akinator/akinator/src/Interfaces/VentanaAdivinar.java</file>
+            <file>file:/D:/akinator/akinator/src/Interfaces/VentanaInicio.java</file>
+        </group>
+    </open-files>
+</project-private>
+>>>>>>> 5266e0a51edded2d7c292f0cc9e879c6aa130625
