@@ -6,13 +6,17 @@
 package Interfaces;
 
 
-import javax.swing.JOptionPane;
+import Proyecto.ArbolBinario;
+import Proyecto.Funciones;
 
 /**
  *
  * @author Raydo
  */
 public class VentanaEscogerCsv extends javax.swing.JFrame {
+    
+    public Funciones f = new Funciones();
+    public ArbolBinario arbol;
   
     
     /**
@@ -98,6 +102,10 @@ public class VentanaEscogerCsv extends javax.swing.JFrame {
         
         new VentanaMenu().setVisible(true);
         dispose();
+        
+        arbol = f.leer();
+        arbol.preorden();
+        
         
         
     }//GEN-LAST:event_ArchivoPredeterminadoActionPerformed
