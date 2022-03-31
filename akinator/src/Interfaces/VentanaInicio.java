@@ -32,8 +32,8 @@ public class VentanaInicio extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jugar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -45,10 +45,6 @@ public class VentanaInicio extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, 270, 450));
 
-        jLabel3.setFont(new java.awt.Font("Niagara Engraved", 0, 90)); // NOI18N
-        jLabel3.setText("AKINATOR");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 210, 70));
-
         jugar.setBackground(new java.awt.Color(255, 255, 255));
         jugar.setText("Jugar");
         jugar.addActionListener(new java.awt.event.ActionListener() {
@@ -57,6 +53,11 @@ public class VentanaInicio extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 90, -1));
+
+        jLabel4.setFont(new java.awt.Font("Niagara Engraved", 0, 90)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("AKINATOR");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 450, 140));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 460));
 
@@ -71,7 +72,7 @@ public class VentanaInicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jugar;
     // End of variables declaration//GEN-END:variables

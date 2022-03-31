@@ -44,7 +44,10 @@ public class NodoBinario {
         this.elemento = elemento;
     }
     
+    public boolean esHoja(){
+        
+        return this.hijoIzq == null && this.hijoDer == null;
     
-    
+    }
     
 }

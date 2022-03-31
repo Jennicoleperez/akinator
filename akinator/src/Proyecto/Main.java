@@ -59,10 +59,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        VentanaInicio vi = new VentanaInicio();
         ArbolBinario arbol = leer();
+  
+        arbol.preorden();
         
-       arbol.preorden();
-            
+        
+          
 
     }
   

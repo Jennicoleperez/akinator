@@ -11,7 +11,7 @@ package Proyecto;
  */
 
 public class ArbolBinario {
-
+    ListaEnlazada lista = new ListaEnlazada();
     NodoBinario raiz;
 
     public ArbolBinario() {
@@ -80,4 +80,19 @@ public class ArbolBinario {
         return buscado;
 
     }
+    public String esHoja(NodoBinario n){
+        String hojita = "";
+        if(n.getHijoIzq() == null && n.getHijoDer() == null){
+           hojita += n.getElemento() + " \n";
+        }
+//        lista.agregarFinal(new NodoHashTable(hojita));
+        
+        System.out.println(hojita);
+        return hojita;
+       
+    
+    }  
+   
+    
+    
 }

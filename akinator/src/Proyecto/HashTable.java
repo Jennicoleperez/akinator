@@ -70,14 +70,11 @@ public class HashTable {
             NodoHashTable temp = this.tabla[posicion];
             if (temp.getAnimal().equals(animal)) {
                 existe = true;
-                temp.addCount();
             }
             while (temp.getSiguiente() != null) {
                 temp = temp.getSiguiente();
                 if (temp.getAnimal().equals(animal)) {
                     existe = true;
-                    temp.addCount();
-
                 }
             }
             if (!existe) {
