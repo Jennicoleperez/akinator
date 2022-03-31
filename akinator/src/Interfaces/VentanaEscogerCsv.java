@@ -5,7 +5,7 @@
  */
 package Interfaces;
 
-import Proyecto.Funciones;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  * @author Raydo
  */
 public class VentanaEscogerCsv extends javax.swing.JFrame {
-    Funciones f;
+  
     
     /**
      * Creates new form VentanaGeneral
@@ -23,7 +23,7 @@ public class VentanaEscogerCsv extends javax.swing.JFrame {
         this.setVisible(true);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
-        f = new Funciones();
+
     }
 
     /**
@@ -94,8 +94,7 @@ public class VentanaEscogerCsv extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ArchivoPredeterminadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ArchivoPredeterminadoActionPerformed
-        JOptionPane.showMessageDialog(null,f.leer());
-        System.out.println(f.leer());
+
         
         new VentanaMenu().setVisible(true);
         dispose();

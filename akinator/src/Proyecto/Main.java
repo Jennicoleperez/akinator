@@ -6,6 +6,10 @@
 package Proyecto;
 
 import Interfaces.VentanaInicio;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,45 +20,50 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        Funciones func = new Funciones();
-        VentanaInicio vi = new VentanaInicio();
-                boolean respuesta;
-		ArbolBinario tree = new ArbolBinario();
-		
-		tree.insertRoot("Vuela?");
-		tree.insertLeft("Vuela?","Ladra?");
-		tree.insertRight("Vuela?", "Caza?");
-		tree.insertLeft("Caza?", "Come Carroña?");
-		tree.insertRight("Caza?", "Es Aguila");
-		tree.insertLeft("Come Carroña?", "Insecto?");
-		tree.insertRight("Come Carroña?", "Buitre");
-		tree.insertLeft("Insecto?", "Es Pajaro");
-                tree.insertRight("Insecto?", "Es Mosca");
-                tree.insertLeft("Ladra?", "Tiene Colmillos?");
-                tree.insertRight("Ladra?", "Es Perro");
-                tree.insertLeft("Tiene Colmillos?", "Cuello Largo?");
-                tree.insertRight("Tiene Colmillos?", "Tiene Trompa?");
-                tree.insertLeft("Cuello Largo?", "Es Ratón");
-                tree.insertRight("Cuello Largo?", "Jirafa");
-                tree.insertLeft("Tiene Trompa?", "Entra en el agua?");
-                tree.insertRight("Tiene Trompa?", "Elefante");
-                tree.insertLeft("Entra en el agua?", "Es Jabalí");
-                tree.insertRight("Entra en el agua?", "Se sumerge?");
-                tree.insertLeft("Se sumerge?", "Es Rinoceronte");
-                tree.insertRight("Se sumerge?", "Es Hipopotamo");
-                Node puntero = tree.getRoot();
-                tree.printTree(puntero);
-                System.out.println("VOY A ADIVINAR TU ANIMAL!");
-                tree.recorrido(puntero);
+    public static ArbolBinario leer() {
+        String linea;
+        String path = "test\\conocimientos.csv";
+        File file = new File(path);
+        ArbolBinario arbol;
 
-////        String csvPred = func.leer();
-//        Lista csvCarg = func.leerCsvCargado();
-////        System.out.println(csvPred);
-//        ArbolBinario tree = func.ListToTree(csvCarg);
-//        Node puntero = tree.getRoot();
-//        tree.printTree(puntero);
-        
+        try {
+            if (!file.exists()) {
+                file.createNewFile();
+
+            } else {
+                FileReader fr = new FileReader(file);
+                BufferedReader br = new BufferedReader(fr);
+                
+                String[] aux = br.readLine().split("; ");
+                NodoBinario raiz = new NodoBinario(aux[0]);
+                arbol = new ArbolBinario(raiz);
+                raiz.setHijoIzq(new NodoBinario(aux[1]));
+                raiz.setHijoDer(new NodoBinario(aux[2]));
+          
+                
+                while ((linea = br.readLine()) != null) {
+                    if (!linea.isEmpty()) {
+                        String[] aux2 = linea.split("; ");
+                        NodoBinario raizAux = arbol.buscar(aux2[0], raiz);
+                        raizAux.setHijoIzq(new NodoBinario(aux2[1]));
+                        raizAux.setHijoDer(new NodoBinario(aux2[2]));
+                    }
+                }
+                return arbol;
+            }
+            
+        } catch (Exception err) {
+            JOptionPane.showMessageDialog(null, "Error al leer los datos.");
+        }
+        return null;
     }
-    
+
+    public static void main(String[] args) {
+        ArbolBinario arbol = leer();
+        
+        arbol.preorden();
+            
+
+    }
+  
 }
