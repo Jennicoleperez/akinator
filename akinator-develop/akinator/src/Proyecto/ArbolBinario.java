@@ -80,6 +80,11 @@ public class ArbolBinario {
         return buscado;
 
     }
+    
+    public void recorrido(){
+        recorrido(this.raiz);
+    }
+    
     public void recorrido(NodoBinario puntero){
             if(puntero.eshoja(puntero) == false){
                 JOptionPane.showMessageDialog(null, puntero.get_info());
