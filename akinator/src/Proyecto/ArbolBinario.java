@@ -89,18 +89,18 @@ public class ArbolBinario {
     
     public void recorrido(NodoBinario puntero) {
         if (puntero.eshoja(puntero) == false) {
-            JOptionPane.showMessageDialog(null, puntero.getElemento());
-            JOptionPane.showInputDialog("1-No,2-Si");
+//            JOptionPane.showMessageDialog(null, puntero.getElemento() + "?" + "\n" + "1-No, 2-Si");
+//            JOptionPane.showMessageDialog(null, "1-No,2-Si");
             String respuesta;
-            respuesta = JOptionPane.showInputDialog("Introduzca su respuesta");
-            if (!respuesta.equals(1) && !respuesta.equals(2)) {
+            respuesta = JOptionPane.showInputDialog(puntero.getElemento() + "?" + "\n" + "1-No, 2-Si");
+            if (!respuesta.equals("1") && !respuesta.equals("2")) {
                 JOptionPane.showMessageDialog(null, "Introduzca el numero 1 o el 2");
                 recorrido(puntero);
             }
-            if (respuesta.equals(1)) {
+            if (respuesta.equals("1")) {
                 puntero = puntero.getHijoIzq();
             }
-            if (respuesta.equals(2)) {
+            if (respuesta.equals("2")) {
                 puntero = puntero.getHijoDer();
             }
             recorrido(puntero);
@@ -113,14 +113,14 @@ public class ArbolBinario {
             JOptionPane.showMessageDialog(null, puntero.getElemento());
             String respuesta2;
             respuesta2 = JOptionPane.showInputDialog("Esa era la respuesta? 1-No, 2-Si");
-            if(!respuesta2.equals(1) && !respuesta2.equals(2)){
-                System.out.println("Introduzca el numero 1 o el 2");
+            if(!respuesta2.equals("1") && !respuesta2.equals("2")){
+                JOptionPane.showMessageDialog(null, "Introduzca el numero 1 o el 2");
                 RespuestaFinal(puntero);
         }
-            if (respuesta2.equals(1)){
+            if (respuesta2.equals("1")){
                InsertarNuevo(puntero); 
             }
-            else if(respuesta2.equals(2)){
+            else if(respuesta2.equals("2")){
                 JOptionPane.showMessageDialog(null, "Ponmela mas dificil para la proxima!");
             }
         }
@@ -134,5 +134,6 @@ public class ArbolBinario {
             NodoBinario puntero3 = new NodoBinario(correcto);
             puntero2.setHijoIzq(puntero);
             puntero2.setHijoDer(puntero3);
+            JOptionPane.showMessageDialog(null, "Gracias ahora soy mas inteligente!");
     }
 }
