@@ -5,12 +5,15 @@
  */
 package Interfaces;
 
+import Proyecto.ArbolBinario;
+
 /**
  *
  * @author Raydo
  */
 public class VentanaMenu extends javax.swing.JFrame {
-
+    
+    public ArbolBinario arbol;
     /**
      * Creates new form VentanaGeneral
      */
@@ -19,6 +22,17 @@ public class VentanaMenu extends javax.swing.JFrame {
         this.setVisible(true);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
+    }
+    public VentanaMenu(ArbolBinario arbol) {
+        initComponents();
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
+        this.arbol = arbol;
+    }
+    
+    public void openVentanaAdivinar(){
+        VentanaAdivinar va = new VentanaAdivinar(this.arbol);
     }
 
     /**
@@ -114,8 +128,9 @@ public class VentanaMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_SalirActionPerformed
 
     private void AdivinarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdivinarActionPerformed
-        new VentanaAdivinar().setVisible(true);
+
         dispose();
+        openVentanaAdivinar();
     }//GEN-LAST:event_AdivinarActionPerformed
 
     private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed

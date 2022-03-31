@@ -8,22 +8,33 @@ package Interfaces;
 
 import Proyecto.ArbolBinario;
 import Proyecto.Funciones;
+<<<<<<< HEAD
 import Proyecto.HashTable;
 import Proyecto.ListaEnlazada;
 import static Proyecto.Main.leer;
 import static Proyecto.Main.main;
 import javax.swing.JOptionPane;
+=======
+>>>>>>> develop
 
 /**
  *
  * @author Raydo
  */
 public class VentanaEscogerCsv extends javax.swing.JFrame {
+<<<<<<< HEAD
     boolean archivo;
     Funciones f;
     HashTable hashTable;
     ListaEnlazada lista;
 
+=======
+    
+    public Funciones f = new Funciones();
+    public ArbolBinario arbol;
+  
+    
+>>>>>>> develop
     /**
      * Creates new form Principal
      */
@@ -36,6 +47,9 @@ public class VentanaEscogerCsv extends javax.swing.JFrame {
         lista = new ListaEnlazada();
         archivo = false;
     
+    }
+    public void openVentanaMenu(){
+        VentanaMenu vm = new VentanaMenu(this.arbol);
     }
 
     /**
@@ -111,7 +125,19 @@ public class VentanaEscogerCsv extends javax.swing.JFrame {
         
         new VentanaMenu().setVisible(true);
         dispose();
+<<<<<<< HEAD
            
+=======
+        
+        this.arbol = f.leer();
+        openVentanaMenu();
+//        arbol.preorden();
+        
+        
+        
+        
+        
+>>>>>>> develop
     }//GEN-LAST:event_ArchivoPredeterminadoActionPerformed
 
     private void EscogerArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EscogerArchivoActionPerformed

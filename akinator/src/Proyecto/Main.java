@@ -20,45 +20,10 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static ArbolBinario leer() {
-        String linea;
-        String path = "test\\conocimientos.csv";
-        File file = new File(path);
-        ArbolBinario arbol;
 
-        try {
-            if (!file.exists()) {
-                file.createNewFile();
-
-            } else {
-                FileReader fr = new FileReader(file);
-                BufferedReader br = new BufferedReader(fr);
-                
-                String[] aux = br.readLine().split("; ");
-                NodoBinario raiz = new NodoBinario(aux[0]);
-                arbol = new ArbolBinario(raiz);
-                raiz.setHijoIzq(new NodoBinario(aux[1]));
-                raiz.setHijoDer(new NodoBinario(aux[2]));
-          
-                
-                while ((linea = br.readLine()) != null) {
-                    if (!linea.isEmpty()) {
-                        String[] aux2 = linea.split("; ");
-                        NodoBinario raizAux = arbol.buscar(aux2[0], raiz);
-                        raizAux.setHijoIzq(new NodoBinario(aux2[1]));
-                        raizAux.setHijoDer(new NodoBinario(aux2[2]));
-                    }
-                }
-                return arbol;
-            }
-            
-        } catch (Exception err) {
-            JOptionPane.showMessageDialog(null, "Error al leer los datos.");
-        }
-        return null;
-    }
 
     public static void main(String[] args) {
+<<<<<<< HEAD
         VentanaInicio vi = new VentanaInicio();
         ArbolBinario arbol = leer();
   
@@ -66,6 +31,10 @@ public class Main {
         
         
           
+=======
+         
+          VentanaInicio vi = new VentanaInicio();  
+>>>>>>> develop
 
     }
   
