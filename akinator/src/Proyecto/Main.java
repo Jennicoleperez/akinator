@@ -61,7 +61,7 @@ public class Main {
     public static void main(String[] args) {
         ArbolBinario arbol = leer();
         
-        arbol.preorden();
+       arbol.preorden();
             
 
     }
