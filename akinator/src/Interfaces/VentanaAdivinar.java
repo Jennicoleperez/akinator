@@ -5,21 +5,33 @@
  */
 package Interfaces;
 
+import Proyecto.ArbolBinario;
+
 /**
  *
  * @author Jennifer Pérez
  */
 public class VentanaAdivinar extends javax.swing.JFrame {
-
+    
+    public ArbolBinario arbol;
     /**
      * Creates new form VentanaGeneral
      */
+    
     public VentanaAdivinar() {
         initComponents();
         this.setVisible(true);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
     }
+    public VentanaAdivinar(ArbolBinario arbol) {
+        initComponents();
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
+        this.arbol = arbol;
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -34,6 +46,7 @@ public class VentanaAdivinar extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         Regresar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        EmpezarAdivinanza = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -58,6 +71,15 @@ public class VentanaAdivinar extends javax.swing.JFrame {
         jLabel2.setText("jLabel1");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, 270, 450));
 
+        EmpezarAdivinanza.setBackground(new java.awt.Color(255, 255, 255));
+        EmpezarAdivinanza.setText("Empezar");
+        EmpezarAdivinanza.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpezarAdivinanzaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpezarAdivinanza, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 220, 210, 30));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 460));
 
         pack();
@@ -68,8 +90,14 @@ public class VentanaAdivinar extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_RegresarActionPerformed
 
+    private void EmpezarAdivinanzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpezarAdivinanzaActionPerformed
+        // TODO add your handling code here:
+        this.arbol.recorrido();
+    }//GEN-LAST:event_EmpezarAdivinanzaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton EmpezarAdivinanza;
     private javax.swing.JButton Regresar;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

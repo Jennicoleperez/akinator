@@ -43,6 +43,13 @@ public class NodoBinario {
     public void setElemento(String elemento) {
         this.elemento = elemento;
     }
+    public boolean eshoja(NodoBinario puntero){
+        if(this.hijoIzq == null && this.hijoDer == null){
+            return true;
+        }else{
+            return false;
+        }
+    }
     
     
     

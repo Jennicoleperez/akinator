@@ -29,6 +29,9 @@ public class VentanaEscogerCsv extends javax.swing.JFrame {
         this.setResizable(false);
 
     }
+    public void openVentanaMenu(){
+        VentanaMenu vm = new VentanaMenu(this.arbol);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -103,8 +106,11 @@ public class VentanaEscogerCsv extends javax.swing.JFrame {
         new VentanaMenu().setVisible(true);
         dispose();
         
-        arbol = f.leer();
-        arbol.preorden();
+        this.arbol = f.leer();
+        openVentanaMenu();
+//        arbol.preorden();
+        
+        
         
         
         

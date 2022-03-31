@@ -94,7 +94,6 @@ public class Funciones {
                 
                 while ((linea = br.readLine()) != null) {
                     if (!linea.isEmpty()) {
-                        System.out.println(linea);
                         String[] aux2 = linea.split("; ");
                         NodoBinario raizAux = arbol.buscar(aux2[0], raiz);
                         raizAux.setHijoIzq(new NodoBinario(aux2[1]));
